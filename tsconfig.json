@@ -1,0 +1,12 @@
+{
+    "files": [
+        "typescript/ToDoItem.ts",
+        "typescript/main.ts"
+    ],
+    "compilerOptions": {
+        "removeComments": true,
+        "outDir": "scripts",
+        "target": "es5",
+        "watch": true
+    }
+}

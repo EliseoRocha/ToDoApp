@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ToDo Item Tracker
-    </title>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/ToDoItem.js"></script>
+    <title>ToDo Item Tracker</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Household ToDo Online Tracker</h1>
+        <p>Remember those household tasks!</p>
+    </header>
+    <main>
+        <form>
+            <label for="title">Title</label>
+            <input id="title" required type="text" name="title">
+            <br>
+            <label for="time_estimate">Time Estimate</label>
+            <input id="time_estimate" name="time_estimate" type="range" min="0" max="10" step=".5">
+            <br>
+            <label for="assigned_to">Assigned To:</label>
+            <select id="assigned_to" name="assigned_to">
+                <option>Anybody</option>
+                <option>Joe</option>
+                <option>Jim</option>
+                <option>Dwight</option>
+            </select>
+            <br>
+            <input type="checkbox" name="is_done" id="is_done">
+            <label for="is_done">Is Completed?</label>
+            <br>
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="5" cols="50"></textarea>
+            <br>
+            <input type="button" value="Add Task">
+        </form>
+    </main>
+    <footer>
+        <p>&copy;2018 - Demo App</p>
+    </footer>
 </body>
 </html>
