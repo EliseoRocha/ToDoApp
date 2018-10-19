@@ -1,0 +1,42 @@
+header{
+    text-align: center;
+    border: 2px solid black;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 50px;
+    margin-bottom: 1em;
+    /* Gradient or box-shadow can add nice color
+    effects */
+    background: linear-gradient(to bottom, #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%);
+}
+
+h1{
+    margin-bottom: 0px;
+    margin-top: .25em;
+}
+
+header > p{
+    margin-top: .3em;
+}
+
+input[type=button]{
+    border-radius: 5px;
+    padding: .5em;
+    background-color: #07560f;
+    color: white;
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+input[type=button]:focus,
+input[type=button]:hover{
+    background-color: red;
+}
+
+form#add_task_form label{
+    margin-right: 1em;
+    margin-bottom: .4em;
+    text-align:right;
+    width: 20%;
+    display: inline-block;
+}

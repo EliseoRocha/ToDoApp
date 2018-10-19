@@ -5,8 +5,8 @@
     ],
     "compilerOptions": {
         "removeComments": true,
-        "outDir": "scripts",
-        "target": "es5",
+        "outFile": "scripts/code.js",
+        "target": "es2015",
         "watch": true
     }
 }

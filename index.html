@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="scripts/main.js"></script>
-    <script src="scripts/ToDoItem.js"></script>
+    <script src="scripts/code.js"></script>
+    <link rel="stylesheet" href="css/site.css">
     <title>ToDo Item Tracker</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
         <p>Remember those household tasks!</p>
     </header>
     <main>
-        <form>
+        <form id="add_task_form">
             <label for="title">Title</label>
             <input id="title" required type="text" name="title">
             <br>
@@ -35,7 +35,7 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" rows="5" cols="50"></textarea>
             <br>
-            <input type="button" value="Add Task">
+            <input id="add_task" type="button" value="Add Task">
         </form>
     </main>
     <footer>
