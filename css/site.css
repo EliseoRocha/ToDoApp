@@ -40,3 +40,28 @@ form#add_task_form label{
     width: 20%;
     display: inline-block;
 }
+
+ul#item_list > li{
+    border: 1px solid black;
+    width: 25%;
+    padding: .6em;
+    margin-bottom: 1em;
+    background-color: teal;
+    text-align: center;
+    border-radius: 10px;
+}
+
+ul#item_list{
+    list-style-type: none;
+    padding: 0px;
+    margin-left: 15%;
+}
+
+.itemDone{
+    background-color: green !important;
+    text-decoration: line-through;
+}
+
+li[data-timeestimate = "10"]{
+    border: 5px solid red !important;
+}

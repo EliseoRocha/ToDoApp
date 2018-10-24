@@ -10,6 +10,25 @@ let items = new Array();
 function addNewItem(todo) {
     items.push(todo);
     console.log(items);
+    addItemToPage(todo);
+}
+function addItemToPage(item) {
+    let itemList = document.getElementById("item_list");
+    let newItem = document.createElement("li");
+    let textNode = document.createTextNode(item.title);
+    newItem.innerText = item.title;
+    newItem.setAttribute("data-timeestimate", item.timeEstimate.toString());
+    newItem.onclick = ToDoItemClicked;
+    itemList.appendChild(newItem);
+}
+function ToDoItemClicked() {
+    console.log("toDoItemClicked triggered");
+    let selectedItem = this;
+    selectedItem.classList.toggle("itemDone");
+    if (selectedItem.classList.contains("ItemDone")) {
+        let hours = selectedItem.getAttribute("data-timeestimate");
+        alert("Congrats on completing " + hours + " of work");
+    }
 }
 window.onload = function () {
     let addTaskBtn = document.getElementById("add_task");

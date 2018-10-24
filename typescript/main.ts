@@ -11,6 +11,44 @@ function addNewItem(todo:ToDoItem){
     items.push(todo);
     
     console.log(items);
+
+    addItemToPage(todo);
+}
+
+function addItemToPage(item:ToDoItem){
+    //Get the <ul> off the page
+    let itemList = document.getElementById("item_list");
+
+    //Create a <li> programatically
+    let newItem = document.createElement("li");
+
+    //Add text through DOM manipulation
+    let textNode = document.createTextNode(item.title);
+
+    //newItem.appendChild(textNode);
+    //Add text through property, same as above
+    newItem.innerText = item.title;
+
+    newItem.setAttribute("data-timeestimate", item.timeEstimate.toString());
+
+    newItem.onclick = ToDoItemClicked;
+
+    //Adding the <li> to the <ul>
+    itemList.appendChild(newItem);
+}
+
+function ToDoItemClicked(){
+    console.log("toDoItemClicked triggered");
+
+    //Get the <li> the user clicked
+    let selectedItem = <HTMLLIElement>this;
+
+    selectedItem.classList.toggle("itemDone");
+
+    if (selectedItem.classList.contains("ItemDone")) {
+        let hours = selectedItem.getAttribute("data-timeestimate");
+        alert("Congrats on completing " + hours + " of work")
+    }
 }
 
 window.onload = function(){
