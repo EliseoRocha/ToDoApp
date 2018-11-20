@@ -10,7 +10,7 @@ let items = new Array<ToDoItem>();
 function addNewItem(todo:ToDoItem){
     items.push(todo);
     
-    console.log(items);
+    console.log(items); //pring array to console
 
     addItemToPage(todo);
 }
@@ -45,9 +45,9 @@ function ToDoItemClicked(){
 
     selectedItem.classList.toggle("itemDone");
 
-    if (selectedItem.classList.contains("ItemDone")) {
+    if (selectedItem.classList.contains("itemDone")) {
         let hours = selectedItem.getAttribute("data-timeestimate");
-        alert("Congrats on completing " + hours + " of work")
+        alert("Congrats on completing " + hours + " of work");
     }
 }
 

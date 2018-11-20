@@ -25,7 +25,7 @@ function ToDoItemClicked() {
     console.log("toDoItemClicked triggered");
     let selectedItem = this;
     selectedItem.classList.toggle("itemDone");
-    if (selectedItem.classList.contains("ItemDone")) {
+    if (selectedItem.classList.contains("itemDone")) {
         let hours = selectedItem.getAttribute("data-timeestimate");
         alert("Congrats on completing " + hours + " of work");
     }
